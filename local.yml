@@ -1,0 +1,21 @@
+- hosts: localhost
+  become: true
+  vars:
+    source_key: "./.ssh/id_rsa"
+    dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
+  pre_tasks:
+    - name:  Update Cache
+      apt:
+        update_cache: true
+      tags:
+        - core
+        - zsh 
+        - ssh
+        - neovim
+        - dotfiles
+  tasks:
+  - include: tasks/core-setup.yml
+  - include: tasks/zsh.yml
+  - include: tasks/ssh.yml
+  - include: tasks/neovim.yml
+  - include: tasks/dotfiles.yml
