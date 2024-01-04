@@ -12,3 +12,10 @@
     - install
     - neovim
     - core
+- name: Install System Packages 3 (stow, tmux)
+  apt:
+    name: [ "stow", "tmux"]
+  tags:
+    - install
+    - neovim
+    - core
