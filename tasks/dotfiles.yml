@@ -15,7 +15,7 @@
     - core
     - dotfiles
 - name: Stow dotfiles
-  shell: cd $HOME/.dotfiles && ./stow
+  shell: cd $HOME/.dotfiles && .stow
   tags:
     - core 
     - dotfiles
