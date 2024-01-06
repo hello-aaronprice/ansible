@@ -21,7 +21,7 @@
     - zsh
     - core
 - name: Download honukai theme
-  shell: curl -L https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm-zsh/tree/master/honukai.zsh-theme > ~/.oh-my-zsh/themes/honukai.zsh-theme
+  shell: curl -fsSL https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm-zsh/master/honukai.zsh-theme > ~/.oh-my-zsh/themes/honukai.zsh-theme
   tags:
     - zsh
     - core
