@@ -1,0 +1,7 @@
+#/usr/bin/env bash
+
+uninstall_oh_my_zsh
+chsh /bin/bash
+sudo apt purge zsh
+
+audo apt -y purge curl htop stow tmux build-essential wireshark golang fzf lsof i3 gimp ccache yarn python3-pip xclip screenkey tdlr lua

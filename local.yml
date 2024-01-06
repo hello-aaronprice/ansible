@@ -13,9 +13,11 @@
         - ssh
         - neovim
         - dotfiles
+        - tmux
   tasks:
   - include: tasks/core-setup.yml
   - include: tasks/zsh.yml
   - include: tasks/ssh.yml
   - include: tasks/neovim.yml
   - include: tasks/dotfiles.yml
+  - include: tasks/tmux.yml

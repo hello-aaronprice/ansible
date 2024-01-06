@@ -1,0 +1,12 @@
+- name: Install Tmux
+  apt: name=tmux
+  tags:
+    - tmux
+    - core
+- name: Install TPM for tmux
+  ansible.builtin.git:
+    repo: "https://github.com/tmux-plugins/tpm.git"
+    dest: "~/.tmux/plugins/tpm"
+  tags:
+    - tmux
+    - core

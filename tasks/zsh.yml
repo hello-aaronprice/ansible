@@ -1,15 +1,15 @@
 - name: Install zsh
   apt: name=zsh
   tags:
-    - zsh
     - core
+    - zsh
 - name: Change shell
   shell: chsh -s `which zsh`
   tags:
     - zsh
-    - core 
+    - core
 - name: Install ohmyzsh
-  shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  shell: curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
   tags:
     - zsh
     - core
@@ -19,9 +19,9 @@
     dest: "~/.oh-my-zsh/plugins/zsh-autosuggestions"
   tags:
     - zsh
-    - core 
-- name: Update zshrc
-  shell: sed -i 's/(git/(git zsh-autosuggestions/' ~/.zshrc
+    - core
+- name: Download honukai theme
+  shell: curl -L https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm-zsh/tree/master/honukai.zsh-theme > ~/.oh-my-zsh/themes/honukai.zsh-theme
   tags:
     - zsh
     - core

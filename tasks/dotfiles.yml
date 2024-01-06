@@ -1,8 +1,3 @@
-- name: Install Stow
-  apt: name=stow
-  tags:
-    - core
-    - dotfiles
 - name: Clone Dotfiles
   ansible.builtin.git:
     repo: git@github.com:hello-aaronprice/.dotfiles.git
@@ -17,5 +12,5 @@
 - name: Stow dotfiles
   shell: cd $HOME/.dotfiles && ./stow
   tags:
-    - core 
+    - core
     - dotfiles
