@@ -10,9 +10,9 @@
   tags:
     - install
     - core
-- name: Install System Packages 3 (stow, fzf, xclip)
+- name: Install System Packages 3 (stow, fzf, xclip, ripgrep)
   apt:
-    name: [ "stow", "fzf", "xclip"]
+    name: [ "stow", "fzf", "xclip", "ripgrep"]
   tags:
     - install
     - core
