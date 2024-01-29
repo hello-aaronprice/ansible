@@ -12,9 +12,8 @@ Heavy inspiration from '[ThePrimeagen's GitHub](https://github.com/ThePrimeagen/
 5. `./docker-build`
 6. `./docker-run`
 7. `ansible-playbook -t core --ask-vault-pass local.yml`
-8. > Vault Password: 
+8. `Vault Password: `
 9. zsh
-
 
 ### TODO
 

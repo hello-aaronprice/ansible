@@ -9,6 +9,7 @@
         update_cache: true
       tags:
         - core
+        - alacritty
         - zsh
         - ssh
         - neovim
