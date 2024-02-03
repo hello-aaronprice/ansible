@@ -23,3 +23,4 @@ Heavy inspiration from '[ThePrimeagen's GitHub](https://github.com/ThePrimeagen/
 - [x] zsh_profile tmux-sessionizer to keybind (bindkey -s ^f "tmux-sessionizer\n")
 - [x] Get tmux-sessionizer working in docker-image using dotfile to ~/.local/bin
 - [x] Install fzf, tmux and cheatsheet (https://github.com/chubin/cheat.sh/tree/master)
+- [ ] NeoVim (git clone packer)
