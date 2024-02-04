@@ -1,22 +1,19 @@
-- name: Neovim Installation
+- name: Download neovim
+  shell: "curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage && chmod u+x nvim.appimage"
+  tags:
+    - neovim
+- name: Extract neovim
+  shell: "./nvim.appimage --appimage-extract && ./squashfs-root/AppRun --version"
+  tags:
+    - neovim
+- name: Move and SymLink neovim
+  shell: "mv squashfs-root / && ln -s /squashfs-root/AppRun /usr/bin/nvim"
+  tags:
+    - neovim
+- name: Clone Packer 
   ansible.builtin.git:
-    repo: 'https://github.com/neovim/neovim.git'
-    dest: "{{ lookup('env', 'HOME') }}/neovim"
-  tags:
-    - neovim
-- name: Build neovim
-  shell: "cd {{ lookup('env', 'HOME') }}/neovim && make"
-  tags:
-    - neovim
-- name: Install neovim
-  shell: "cd {{ lookup('env', 'HOME') }}/neovim && make install"
-  tags:
-    - neovim
-- name: Neovim Plugin Development 1
-  apt: name=luarocks
-  tags:
-    - neovim
-- name: Neovim Plugin Development 2 luacheck
-  shell: luarocks install luacheck
+    repo: 'https://github.com/wbthomason/packer.nvim'
+    dest: "{{ lookup('env', 'HOME') }}/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    depth: 1
   tags:
     - neovim
