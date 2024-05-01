@@ -10,9 +10,21 @@
   tags:
     - install
     - core
-- name: Install System Packages 3 (stow, fzf, xclip, ripgrep)
+- name: Install System Packages 3 (stow, xclip, ripgrep)
   apt:
-    name: [ "stow", "fzf", "xclip", "ripgrep"]
+    name: [ "stow", "xclip", "ripgrep"]
+  tags:
+    - install
+    - core
+- name: Install fzf
+  ansible.builtin.git:
+    repo: "https://github.com/junegunn/fzf.git" 
+    dest: "~/.fzf"
+  tags:
+    - install
+    - core
+- name: Install fzf (shell)
+  shell: ~/.fzf/install
   tags:
     - install
     - core
